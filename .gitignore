@@ -1,5 +1,5 @@
 .Rhistory
-*.RData
+corpus_guten.RData
 *.csv
 .Rproj.*
 .Rproj.user

@@ -4,7 +4,7 @@ This package, called `corpusr`, is a simple, single-purpose package for querying
 # Structure
 The `corpusr` package allows one to build a corpus or search the `gutenbergr` corpus (available in the package by the same name). The built-in data comes from `gutenbergr`, although the data structures (`cps_bk` and `cps_corpus`) are flexible enough to allow data entry from other sources.
 
-The `text_analysis.Rproj` R project contains some practical examples of using the `corpusr` package to build a corpus with all works by the top 80 or so authors on Project Gutenberg. The list of names is done by web-scraping, the works queried directly from the `gutenbergr` package, and the corpus is finally built with `corpusr` and stored as a `cps_corpus`. With over 1,500 books from a variety of authors and time periods, you can find almost any word in the English language used in context.
+The `text_analysis.Rproj` R project contains some practical examples of using the `corpusr` package to build a corpus with all works by the top 80 or so authors on Project Gutenberg. The list of names was done by web-scraping and hand-editing the CSV file, so this is excluded from the R files. The works were queried directly from the `gutenbergr` package using the list of authors, and the corpus is finally built with `corpusr` and stored as a `cps_corpus`. With over 1,500 books from a variety of authors and time periods, you can find almost any word in the English language used in context.
 
 The search tool I wrote, `corpusr::guten_search`, is written with regular expressions built in, so you can search not only for words, phrases, and collocations, but also for several word forms at once (as is necessary with verbs in particular).
 
@@ -23,4 +23,4 @@ The purpose of my package is small, but it derives mostly from one thing: it's h
 
 Why is it necessary to look at example sentences? Why not use a good dictionary with usage labels like _rare_, _chiefly N. American_, and so on? There is no reason not to use a dictionary, but it's analogous to reading a description of a photograph instead of looking at the photograph itself. By reading a description of a photo, you understand the content, the context, and you might get more information in a description than you could possibly by looking at the photograph (its history, inspiration, etc.). But you don't understand the photograph because you haven't seen it.
 
-Today, there are no dictionaries of illustrative quotations. Even the OED gives mainly historical quotations, not all of which are useful to the modern English speaker/writer. Thus, there is a need to have a simple-to-use, searchable, customizable corpus of sentences. 
+Today, there are no dictionaries of illustrative quotations. Even the OED gives mainly historical quotations, not all of which are useful to the modern English speaker/writer. Thus, there is a need to have a simple-to-use, searchable, customizable corpus of sentences.
