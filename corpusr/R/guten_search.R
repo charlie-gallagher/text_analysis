@@ -1,11 +1,11 @@
-#' Search a gutenberg text for a word
+#' Search a gutenbergr text for a word
 #'
 #' Calls \code{guten_grab} and returns sentences containing the specified word.
 #'
 #' @param code Book code from \code{gutenbergr::gutenberg_metadata}. Numeric.
 #' @param word Word of interest. Character.
 #'
-#' @return A \code{tbl_df} with one observation per sentence.
+#' @return A \code{cps_bk}.
 #'
 #' @export
 #'

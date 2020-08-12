@@ -1,7 +1,7 @@
 #' Gutenberg texts properly formatted
 #'
 #' Get a book's text from Project Gutenberg via \code{gutenbergr}. The formatting
-#' is fixed, so that it returns sentences rather than lines.
+#' is corrected, so that it returns sentences rather than lines.
 #'
 #' This is the details section, supposedly. It may have its own sections.
 #'

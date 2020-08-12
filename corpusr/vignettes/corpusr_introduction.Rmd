@@ -21,3 +21,13 @@ library(corpusr)
 ## Introduction
 The `corpusr` package shows you words in context. Given a corpus, broken down into individual works and within those works into individual sentences, you can query that corpus for all instances of a given word. The main unit of work is the `cps_corpus`, which is merely a collection of `cps_book` objects. These objects provide print methods to improve readability of the selections, always giving the author and the name of the work. 
 
+## Basic functionality
+There are two ways to use the `corpusr` package. First, if you are connected to the internet, you can communicate with the `gutenbergr` server to download and search books given an author's identification information. Second, if you would like to build your own corpus, you can use the `corpus_build` family of functions. 
+
+### Interactive use
+To work interactively, use the functions `guten_search_author` and `guten_search_works`. These are best used with information taken from `View(gutenbergr::gutenberg_metadata)`. 
+
+### Corpus building
+With the `guten_grab` function, you give a numeric code of a work and receive a `cps_corpus` with that work and its complete metadata. You can also build a corpus for all works by a certain author with `corpus_build_author`, and you can build a corpus with a list of book codes with `corpus_build_works`.
+
+Once you have a corpus built, you can search it with `guten_search`. 
