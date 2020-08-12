@@ -30,4 +30,4 @@ To work interactively, use the functions `guten_search_author` and `guten_search
 ### Corpus building
 With the `guten_grab` function, you give a numeric code of a work and receive a `cps_corpus` with that work and its complete metadata. You can also build a corpus for all works by a certain author with `corpus_build_author`, and you can build a corpus with a list of book codes with `corpus_build_works`.
 
-Once you have a corpus built, you can search it with `guten_search`. 
+Once you have a corpus built, you can search it with `guten_search`. This function works by surrounding your argument with 'word limit' regular expression characters, so it is very flexible. For instance, you can search for both words and phrases, and you can use any of the typical regular expression toolkit you're used to. This flexibility allows you to search for verbs, for example, with a single search. You might be interested in the uses of the verb 'inure', so you would have a search that captures its typical English forms: `"inur(es|ed|ing)?"`. Or, you might be interested in certain collocations with "inure": has anyone ever been 'inured of' or 'inured on'? And so on. 
