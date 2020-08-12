@@ -1,0 +1,15 @@
+Package: corpusr
+Type: Package
+Title: Manipulate Gutenberg Data
+Version: 0.4.1
+Authors@R: person("Charlie", "Gallagher", email = "charlesjgallagher15@gmail.com",
+  role = c("aut", "cre"))
+Maintainer: Charlie Gallagher <charlesjgallagher15@gmail.com>
+Description: Functions for creating a corpus of sentences from the
+    gutenbergr package. 
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Depends: gutenbergr
+Imports: crayon,dplyr,magrittr,purrr,stringi,tibble
+RoxygenNote: 7.0.2

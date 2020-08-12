@@ -1,0 +1,10 @@
+Notes on 'corpusr' package
+
+0.3.0 - Implemented cps_bk and cps_corpus S3 objects. Package 'gutenbergr' must be included in the 'depends:' field because it uses gutenberg_metadata, which isn't found in the namespace file. To do: Limit the output of the printing of cps_bk and cps_corpus objects. This has to be done with flexibility, which might be as easy as changing the setting in print(x, ...). 
+
+
+Bug: corpus_build_works is functional with normal vectors of numbers, but it breaks when one of the broken links is passed to it. See, for example, works in the 19000's. The error says "a cps_corpus object must be composed of cps_bk objects." I would bet it is a problem with the NULLs that get returned. This was the case. I removed the NULL values (not using a logical index, which didn't work, but by using purrr::compact). Function is working again, albeit with errors. 
+
+0.3.1 - Implemented new print method. It's a little hacky, and I would like a better method. Further, it's got problems when combined with `corpus_search` and short books. When you print a book less than 10 lines, it prints 10 lines anyway. When you use 'corpus_search', you are returned list numbers (which are supposed to be absent). 
+
+0.3.2 - Fixed print method problems. Limited number of sentences and eliminated the "joining by 'gutenberg_id'" text. 

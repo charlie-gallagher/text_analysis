@@ -129,7 +129,6 @@ library(gutenbergr)
 load('data/corpus_guten.RData')
 
 penury <- corpus_search(corpus_texts, "penur(y|ious)")
-
 adumbrate <- corpus_search(corpus_texts, "adumbrates?d?")
 aloof <- corpus_search(corpus_texts, "aloof")
 bombinate <- corpus_search(corpus_texts, "bombinat(e|ing|ed|s|ion)")
