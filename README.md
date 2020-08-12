@@ -1,11 +1,26 @@
 # Text Analysis
 This package, called `corpusr`, is a simple, single-purpose package for querying any corpus for sentences containing a word of interest.
 
-In fact, this repo currently only contains some working files I have, not the actual package. Let me fix that.
-
-Fixed.
-
 # Structure
-Ideally, the structure would be to have the repository in two parts. In the first part, you have the package `corpusr`, which doesn't do much on its own except provide the super-structure for the text analysis project. Then, you use the `text_analysis.Rproj` project to do most of the heavy lifting: Scraping names of authors, building a corpus, querying that corpus, etc. Together, they should form a complete unit, neither functioning well without the other.
+The `corpusr` package allows one to build a corpus or search the `gutenbergr` corpus (available in the package by the same name). The built-in data comes from `gutenbergr`, although the data structures (`cps_bk` and `cps_corpus`) are flexible enough to allow data entry from other sources.
 
-This presents a challenge, however, because I have to work also with my other account to properly compile the package. I can install fine, but installing form source fails on this account thanks to Windows' shitty personalization. Anyway, I won't set up a remote for that, although I could and it would be interesting... Ok, let me try setting up a remote to the same github repository. 
+The `text_analysis.Rproj` R project contains some practical examples of using the `corpusr` package to build a corpus with all works by the top 80 or so authors on Project Gutenberg. The list of names is done by web-scraping, the works queried directly from the `gutenbergr` package, and the corpus is finally built with `corpusr` and stored as a `cps_corpus`. With over 1,500 books from a variety of authors and time periods, you can find almost any word in the English language used in context.
+
+The search tool I wrote, `corpusr::guten_search`, is written with regular expressions built in, so you can search not only for words, phrases, and collocations, but also for several word forms at once (as is necessary with verbs in particular).
+
+This is one project I would like to convert to a Python project using the [Natural Language Toolkit](https://www.nltk.org/). Owing to the large size of the corpora that you can generate with `corpusr`, both packages would have a place in my language processing workflow. But this is all just personal notetaking.
+
+# History and Purpose
+I read often, and I write often. When I find a word I like, say 'jeremiad', I'm interested in how the word is used. A 'jeremiad' is a lamentation or complaint, and it refers specifically to the Jeremiah in the Bible: does that mean it's always used with a religious connotation? Does it have a typical collocation?
+
+Illustrative quotations are central to modern lexicography, but it was not always that way. Published in 1755, Samuel Johnson's "A Dictionary of the English Language" was criticized by his contemporaries and successors for having too many quotations, and subsequent dictionaries all reduced the number of illustrative quotations they used. One dictionary editor named Charles Richardson, however, went the opposite direction: in his _A New Dictionary of the English Language_, he gave short definitions and a long list of illustrative quotations. His was not a successful dictionary, but it did play a critical role in the history of lexicography, for it foreshadowed the mass collection of quotations for the compilation of the _Oxford English Dictionary_, the most important English language dictionary then and now.
+
+The first edition of the OED contained 252,200 entries and 1,861,200 illustrative quotations from a corpus of approximately 5 million slips, all hand-written and contributed by everyone lexicographical authorities to interested readers. Today, the OED contains about 290,500 main entries with 2,412,400 illustrative quotations. (For an interesting look at the statistics of the OED, take a look at the [OED Editions](https://public.oed.com/history/oed-editions/) website.) There was, is, and always will be, a large place for quotations in the OED, because lexicographers are as interested in word usage as in word definitions (if it even makes sense to talk about them as separate entities). Today, the OED is powered by the Oxford English Corpus. It contains nearly 2.1 billion words, all searchable in context, from all imaginable sources from the English-speaking world.
+
+Important developments often come from extremes. In 1961, Merriam-Webster published _Webster's Third New International Dictionary_, and the editors (led by Philip Babcock Gove) included all manner of quotations from well-respected literary men to the Saturday Evening Post and Reader's Digest. Reviewers were outraged. They felt that proper English was being degraded, destroyeed. But I think to many lexicographers it made sense. It certainly made sense to the editors of the OED. If you want to define English, you must go where it is spoken. _Everywhere_ it is spoken.
+
+The purpose of my package is small, but it derives mostly from one thing: it's hard to find good illustrative quotations. Most corpora are not publicly available, and if they are they are expensive, difficult to use, or small. I wanted a search engine in which you could search for a word or phrase and be given example sentences from across literature.
+
+Why is it necessary to look at example sentences? Why not use a good dictionary with usage labels like _rare_, _chiefly N. American_, and so on? There is no reason not to use a dictionary, but it's analogous to reading a description of a photograph instead of looking at the photograph itself. By reading a description of a photo, you understand the content, the context, and you might get more information in a description than you could possibly by looking at the photograph (its history, inspiration, etc.). But you don't understand the photograph because you haven't seen it.
+
+Today, there are no dictionaries of illustrative quotations. Even the OED gives mainly historical quotations, not all of which are useful to the modern English speaker/writer. Thus, there is a need to have a simple-to-use, searchable, customizable corpus of sentences. 
