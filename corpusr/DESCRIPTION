@@ -13,3 +13,7 @@ LazyData: true
 Depends: gutenbergr
 Imports: crayon,dplyr,magrittr,purrr,stringi,tibble
 RoxygenNote: 7.0.2
+Suggests: 
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr

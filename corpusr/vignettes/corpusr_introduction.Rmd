@@ -1,0 +1,23 @@
+---
+title: "Corpusr: Introduction"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Corpusr: Introduction}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(corpusr)
+```
+
+## Introduction
+The `corpusr` package shows you words in context. Given a corpus, broken down into individual works and within those works into individual sentences, you can query that corpus for all instances of a given word. The main unit of work is the `cps_corpus`, which is merely a collection of `cps_book` objects. These objects provide print methods to improve readability of the selections, always giving the author and the name of the work. 
+
