@@ -39,7 +39,12 @@ corpus_search(corpus_guten, 'viscid')
 corpus_search(corpus_guten, 'at sixes and sevens')
 corpus_search(corpus_guten, 'avuncular')
 corpus_search(corpus_guten, 'eyrie')
+corpus_search(corpus_guten, 'bedraggled')
 
 # Interactive usage
 guten_search_author("Lincoln, Abraham", "score") # Was Lincoln in the habit of using 'score'?
 guten_search_works(6, "liberty") # work 6 is "Give Me Liberty or Give Me Death"
+
+# TODO: Add support for missing works in guten_search_author and 
+# guten_search_works.
+# TODO: Add examples of use to README file
