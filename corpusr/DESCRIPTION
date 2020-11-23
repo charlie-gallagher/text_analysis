@@ -1,7 +1,7 @@
 Package: corpusr
 Type: Package
 Title: Manipulate Gutenberg Data
-Version: 0.4.1
+Version: 0.4.2
 Authors@R: person("Charlie", "Gallagher", email = "charlesjgallagher15@gmail.com",
   role = c("aut", "cre"))
 Maintainer: Charlie Gallagher <charlesjgallagher15@gmail.com>
