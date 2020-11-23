@@ -2,7 +2,7 @@
 % Please edit documentation in R/guten_search.R
 \name{guten_search}
 \alias{guten_search}
-\title{Search a gutenberg text for a word}
+\title{Search a gutenbergr text for a word}
 \usage{
 guten_search(code, word)
 }
@@ -12,7 +12,7 @@ guten_search(code, word)
 \item{word}{Word of interest. Character.}
 }
 \value{
-A \code{tbl_df} with one observation per sentence.
+A \code{cps_bk}, or NULL if no book is returned from gutenbergr.
 }
 \description{
 Calls \code{guten_grab} and returns sentences containing the specified word.

@@ -14,7 +14,7 @@ A \code{cps_bk}.
 }
 \description{
 Get a book's text from Project Gutenberg via \code{gutenbergr}. The formatting
-is fixed, so that it returns sentences rather than lines.
+is corrected, so that it returns sentences rather than lines.
 }
 \details{
 This is the details section, supposedly. It may have its own sections.

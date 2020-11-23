@@ -24,6 +24,7 @@ guten_search_author <- function(guten_author, word) {
     dplyr::pull(var = 1)
 
   corpus_output <- lapply(work_ids, function(x) guten_search(x, word)) %>%
+    purrr::discard(is.null) %>%
     cps_corpus()
 
   match_l <- vapply(X = corpus_output,

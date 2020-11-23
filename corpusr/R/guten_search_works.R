@@ -21,6 +21,7 @@ guten_search_works <- function(work_ids, word) {
   if (!is.character(word)) stop("Word is not a character vector")
 
   corpus_output <- lapply(work_ids, function(x) guten_search(x, word)) %>%
+    purrr::discard(is.null) %>%
     cps_corpus()
 
   match_len <- vapply(X = corpus_output,
