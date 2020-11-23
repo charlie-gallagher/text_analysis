@@ -3,3 +3,6 @@ corpus_guten.RData
 *.csv
 .Rproj.*
 .Rproj.user
+corpusr.Rcheck/
+*.tar.gz
+*.zip
