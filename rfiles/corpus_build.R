@@ -2,6 +2,8 @@ library(corpusr)
 library(tidyverse)
 
 # Building the corpus -----------
+
+# WARNING: This will take some time. 
 load('data/authors.RData') # Built-in list of 65 authors
 list_of_works <- gutenbergr::gutenberg_works(author %in% authors) %>%
   pull(var = 1)
@@ -45,6 +47,4 @@ corpus_search(corpus_guten, 'bedraggled')
 guten_search_author("Lincoln, Abraham", "score") # Was Lincoln in the habit of using 'score'?
 guten_search_works(6, "liberty") # work 6 is "Give Me Liberty or Give Me Death"
 
-# TODO: Add support for missing works in guten_search_author and 
-# guten_search_works.
-# TODO: Add examples of use to README file
+guten_search_author("London, Jack", "bedraggled")
